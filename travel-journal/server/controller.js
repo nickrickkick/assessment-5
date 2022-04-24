@@ -22,7 +22,12 @@ module.exports = {
                 name varchar
             );
 
-            *****YOUR CODE HERE*****
+            create table cities (
+                city_id serial primary key,
+                name varcar,
+                rating integer,
+                country_id INTEGER REFERENCES countries(country_id)
+            )
 
             insert into countries (name)
             values ('Afghanistan'),
